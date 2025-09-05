@@ -7,11 +7,11 @@ let conditionText = 'What is the result of the expression?';
 
 function questionFn() {
   let arrExp = ['+', '-', '*'];
-  let exp = arrExp[randomNum(arrExp.length)]
+  let exp = arrExp[randomNum(arrExp.length - 1)]
   return `${randomNum(100)} ${exp} ${randomNum(100)}`;
 }
 function correctAnswerFn(question) {
-  let result = Function("return " + question)();
+  let result = new Function("return " + question)();
   return result.toString();
 }
 
