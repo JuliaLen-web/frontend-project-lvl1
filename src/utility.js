@@ -31,7 +31,7 @@ export function progressionArray() {
   let start = randomNum(100)
   let step = randomNum(10)
 
-  for(let i = 0;  i < lengthArray;  i++) {
+  for (let i= 0; i < lengthArray; i++) {
     let currentElement = start + i * step
     if (i !== chooseIndex) {
       resArray.push(currentElement)
@@ -44,7 +44,7 @@ export function progressionArray() {
 }
 
 export function isPrime(num) {
-  for (let i = 2;  i < num;  i++) {
+  for (let i = 2; i < num; i++) {
     if (num % i === 0) return false
   }
   return num !== 1

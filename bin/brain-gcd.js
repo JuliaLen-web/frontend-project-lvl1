@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import commonLogic from "../src/index.js"
-import { randomNum } from "../src/utility.js"
-import { greatestCommonDivisor } from "../src/utility.js"
+import commonLogic from '../src/index.js'
+import { randomNum } from '../src/utility.js'
+import { greatestCommonDivisor } from '../src/utility.js'
 
 let conditionText = 'Find the greatest common divisor of given numbers.'
 
@@ -16,5 +16,3 @@ function correctAnswerFn(question) {
 }
 
 commonLogic(conditionText, questionFn, correctAnswerFn)
-
-

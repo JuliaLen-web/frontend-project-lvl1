@@ -1,19 +1,17 @@
 #!/usr/bin/env node
+import commonLogic from '../src/index.js'
+import { randomNum } from '../src/utility.js'
 
-import commonLogic from "../src/index.js" 
-import {randomNum} from "../src/utility.js" 
-
-let conditionText = 'What is the result of the expression?' 
+let conditionText = 'What is the result of the expression?'
 
 function questionFn() {
-  let arrExp = ['+', '-', '*'] 
+  let arrExp = ['+', '-', '*']
   let exp = arrExp[randomNum(arrExp.length - 1)]
-  return `${randomNum(100)} ${exp} ${randomNum(100)}` 
+  return `${randomNum(100)} ${exp} ${randomNum(100)}`
 }
 function correctAnswerFn(question) {
-  let result = new Function("return " + question)() 
-  return result.toString() 
+  let result = new Function('return ' + question)()
+  return result.toString()
 }
 
-commonLogic(conditionText, questionFn, correctAnswerFn) 
-
+commonLogic(conditionText, questionFn, correctAnswerFn)
