@@ -18,6 +18,7 @@ function game(conditionText, questionFn, correctAnswerFn, name) {
       }
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`)
       return false;
     }
   }
