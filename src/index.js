@@ -4,16 +4,16 @@ import readlineSync from 'readline-sync'
 
 function game(conditionText, questionFn, correctAnswerFn, name) {
   console.log(conditionText)
-  for (let i= 0; i < 3; i++) {
+  for (let i = 0; i < 3; i++) {
     let question = questionFn()
     let correctAnswer = correctAnswerFn(question)
 
     console.log(`Question: ${question}`)
     const answer = readlineSync.question('Your answer: ')
 
-    if(correctAnswer === answer) {
+    if (correctAnswer === answer) {
       console.log('Correct!')
-      if(i === 2) {
+      if (i === 2) {
         console.log(`Congratulations, ${name}!`)
       }
     }

@@ -31,11 +31,12 @@ export function progressionArray() {
   let start = randomNum(100)
   let step = randomNum(10)
 
-  for (let i= 0; i < lengthArray; i++) {
+  for (let i = 0; i < lengthArray; i++) {
     let currentElement = start + i * step
     if (i !== chooseIndex) {
       resArray.push(currentElement)
-    } else {
+    }
+    else {
       resArray.push('..')
     }
   }
